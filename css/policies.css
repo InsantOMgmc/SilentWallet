@@ -1,0 +1,134 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:regular,500,600);
+
+*,
+::after,
+::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff
+}
+
+
+.container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    width: 100%
+}
+
+@media screen and (max-width:991.98px) {
+    .container {
+        padding-left: 4rem;
+        padding-right: 4rem
+    }
+}
+
+@media screen and (max-width:767.98px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem
+    }
+
+    .container--wide {
+        padding-left: 2rem;
+        padding-right: 2rem
+    }
+}
+
+header {
+    margin-top: 39px;
+}
+
+.page-wrapper {
+    margin-top: 53px;
+    margin-bottom: 84px;
+    max-width: 906px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+}
+
+main .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-header {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    color: #000;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page-content__item p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    color: #000;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.privacy-menu {
+    display: flex;
+    gap: 43px;
+    list-style: none;
+}
+
+.privacy-menu li a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 161%;
+    color: #000;
+    text-decoration: none;
+}
+
+@media (max-width: 930px) {
+    .footer-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .privacy-menu {
+        padding-bottom: 25px;
+        flex-wrap: wrap;
+        column-gap: 25px;
+        row-gap: 12px;
+    }
+    .page-wrapper {
+        gap: 20px;
+        margin-top: 32px;
+        margin-bottom: 42px;
+    }
+}
