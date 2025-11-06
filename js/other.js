@@ -2,6 +2,7 @@ const openContactUsFormBtns = document.querySelectorAll('.openContactUsForm')
 const contactUsWindow = document.getElementById('contact-us-window')
 const windowWrapper = contactUsWindow.parentElement;
 const closeWindowBtn = contactUsWindow.querySelector('.modal-window-close-btn')
+const body = document.body
 
 openContactUsFormBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -9,10 +10,11 @@ openContactUsFormBtns.forEach(btn => {
         const openMenuBtn = document.querySelector('.btn-menu')
         const menu = document.querySelector('.menu-block')
         const burger = openMenuBtn.querySelector('.burger')
-        if (openMenuBtn.classList.contains('active') && menu.classList.contains('active') && burger.classList.contains('on')) {
+        if (openMenuBtn.classList.contains('active') && menu.classList.contains('active') && burger.classList.contains('on') && body.classList.contains("menu_expand")) {
             openMenuBtn.classList.remove('active')
             menu.classList.remove('active')
             burger.classList.remove('on')
+            body.classList.remove('menu_expand')
         }
 
         windowWrapper.classList.add('active');
@@ -39,13 +41,6 @@ const dropdownContent = document.getElementById('dropdownContent');
 
 dropdownBtn.addEventListener('click', () => {
     dropdown.classList.toggle('active');
-
-    if (dropdown.classList.contains('active')) {
-        const offsetHeight = dropdownContent.offsetHeight;
-        dropdown.style.marginBottom = offsetHeight + "px";
-    } else {
-        dropdown.style.marginBottom = "0px";
-    }
 });
 
 const categoryInput = document.getElementById('categoryInput')
@@ -55,7 +50,6 @@ dropdownContent.querySelectorAll('div').forEach(option => {
         categoryInput.value = option.textContent;
         dropdownBtn.classList.add('active')
         dropdown.classList.remove('active');
-        dropdown.style.marginBottom = 0;
     });
 });
 
@@ -63,7 +57,6 @@ dropdownContent.querySelectorAll('div').forEach(option => {
 document.addEventListener('click', (e) => {
     if (!dropdown.contains(e.target)) {
         dropdown.classList.remove('active');
-        dropdown.style.marginBottom = 0;
     }
 });
 
