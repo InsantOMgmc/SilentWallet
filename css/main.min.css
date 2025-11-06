@@ -1997,7 +1997,8 @@ p {
     height: 3.31rem;
     font-weight: 500;
     font-size: .88rem;
-    color: #000
+    color: #000;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -3945,6 +3946,17 @@ p {
     width: 32px;
     height: 32px;
     background: transparent;
+}
+
+.openContactUsForm {
+    background: rgb(0, 0, 0);
+    color: #fff;
+    transition: .3s ease-in-out;
+}
+
+.openContactUsForm:hover {
+    background: #fff;
+    color: rgb(0, 0, 0);
 }
 
 @media (hover: hover) {
